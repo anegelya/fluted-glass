@@ -1,5 +1,7 @@
 # Fluted Glass Effect
 
+![Fluted Glass Effect](/cover.png "Fluted Glass Effect")
+
 ## Introduction
 
 This Vue component, inspired by a fluted glass effect showcased in a [tweet](https://twitter.com/arcinternet/status/1736782043202089154), is specifically built for Vue 3. It leverages the latest features of Vue 3 to provide a unique and stylish glass effect, resembling fluted glass. Additionally, this project utilizes Tailwind CSS for styling, offering a highly customizable and responsive design experience.
