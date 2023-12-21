@@ -22,10 +22,24 @@
       </FlutedGlass>
     </div>
   </div>
+
+  <div class="fixed left-4 bottom-[7em] z-10">
+    <div class="flex justify-center text-white mt-8">
+      <Button
+        as="a"
+        href="https://github.com/anegelya/fluted-glass"
+        size="sm">
+        <Icon icon="line-md:github-twotone" class="w-4 h-4 me-1" />
+        github
+      </Button>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { Icon } from '@iconify/vue'
+import { Button } from './components/ui/button'
 import { Switch } from './components/ui/switch'
 import { Label } from './components/ui/label'
 import FlutedGlass from './components/FlutedGlass.vue'

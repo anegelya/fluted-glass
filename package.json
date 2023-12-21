@@ -18,6 +18,7 @@
     "vue": "^3.3.11"
   },
   "devDependencies": {
+    "@iconify/vue": "^4.1.1",
     "@types/node": "^20.10.5",
     "@vitejs/plugin-vue": "^4.5.2",
     "autoprefixer": "^10.4.16",
