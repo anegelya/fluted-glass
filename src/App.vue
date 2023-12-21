@@ -7,7 +7,10 @@
       TOI-4127 b. Mass (Mj) - 2.30±0.11, Radius (Rj) - 1.096+0.039−0.032, Period (days) 56.39879±0.00010, Semi-major axis (AU) - 0.3081+0.0055−0.0058, Temp. (K) - 605.1+9.6−8.2.
     </p>
   </div>
+  <div class="fixed top-0 left-0 right-0 bottom-0 w-full- h-full flex justify-center items-center z-10" style="height: 100svh;">
+    <div class="w-full max-w-xl h-[7em] p-4">
         <span class="text-white">fluted glass</span>
+    </div>
   </div>
 </template>
 
