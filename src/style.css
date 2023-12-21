@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: black;
+  color: #ffd68a;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10em;
+  background: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
+  mask: linear-gradient(to bottom, black, black 30%, transparent);
+  backdrop-filter: blur(8px);
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 10em;
+  background: linear-gradient(to top, rgba(0,0,0,.5), transparent);
+  mask: linear-gradient(to top, black, black 30%, transparent);
+  backdrop-filter: blur(8px);
+}
