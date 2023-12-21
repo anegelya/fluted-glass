@@ -1,7 +1,11 @@
 <template>
-  <div class="my-[20em]">
-    <h1 class="text-[6em] leading-none mb-[2em]">TOI-<br>3235 b</h1>
-    <img src="/planet.png" alt="TOI-3235 b" class="relative w-screen mb-[20em]">
+  <div class="max-w-screen overflow-x-hidden py-24">
+    <p class="text-[18vw] leading-none break-words break-all">
+      TOI-3235 b. Mass (Mj) - 0.665±0.025, Radius (Rj) - 1.017±0.044, Period (days) 2.59261842±0.00000041, Semi-major axis (AU) - 0.02709±0.00046, Temp. (K) - 604±19.
+    </p>
+    <p class="text-[18vw] leading-none break-words break-all">
+      TOI-4127 b. Mass (Mj) - 2.30±0.11, Radius (Rj) - 1.096+0.039−0.032, Period (days) 56.39879±0.00010, Semi-major axis (AU) - 0.3081+0.0055−0.0058, Temp. (K) - 605.1+9.6−8.2.
+    </p>
   </div>
         <span class="text-white">fluted glass</span>
   </div>
