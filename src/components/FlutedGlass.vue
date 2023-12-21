@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full h-full rounded-2xl cursor-pointer transition-all duration-[50ms] ease-in active:scale-[0.98]">
+  <div class="relative w-full h-full rounded-2xl cursor-pointer transition-all duration-75 ease-in active:scale-[0.98]">
     <div class="h-full w-full backdrop-blur-md rounded-2xl overflow-hidden bg-stone-200/10 shadow-xl">
     </div>
 
