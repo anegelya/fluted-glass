@@ -8,14 +8,28 @@
     </p>
   </div>
   <div class="fixed top-0 left-0 right-0 bottom-0 w-full- h-full flex justify-center items-center z-10" style="height: 100svh;">
-    <div class="w-full max-w-xl h-[7em] p-4">
-      <FlutedGlass type="cross">
-        <span class="text-white">fluted glass</span>
+    <div class="w-full max-w-xl h-[10em] p-4">
+      <FlutedGlass :type="isCross ? 'cross' : 'fluted'">
+        <div class="flex items-center space-x-2">
+          <Switch
+            id="cross-fluted-glass"
+            v-model:checked="isCross"
+          />
+          <Label for="cross-fluted-glass">
+            Cross Reed: {{ isCross }}
+          </Label>
+        </div>
       </FlutedGlass>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+import { Switch } from './components/ui/switch'
+import { Label } from './components/ui/label'
 import FlutedGlass from './components/FlutedGlass.vue'
+
+const isCross = ref(false)
+
 </script>
