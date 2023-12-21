@@ -9,7 +9,9 @@
   </div>
   <div class="fixed top-0 left-0 right-0 bottom-0 w-full- h-full flex justify-center items-center z-10" style="height: 100svh;">
     <div class="w-full max-w-xl h-[7em] p-4">
+      <FlutedGlass type="cross">
         <span class="text-white">fluted glass</span>
+      </FlutedGlass>
     </div>
   </div>
 </template>
