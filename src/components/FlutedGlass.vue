@@ -23,11 +23,11 @@ import { defineProps, withDefaults } from 'vue'
 
 type FlutedGlassType = 'fluted' | 'cross'
 
-interface Props {
+export interface FlutedGlassProps {
   type: FlutedGlassType,
 }
 
-withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<FlutedGlassProps>(), {
   type: 'fluted',
 })
 
