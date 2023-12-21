@@ -16,7 +16,7 @@
             v-model:checked="isCross"
           />
           <Label for="cross-fluted-glass">
-            Cross Reed: {{ isCross }}
+            Cross Reed
           </Label>
         </div>
       </FlutedGlass>
