@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, withDefaults } from 'vue'
+import { withDefaults } from 'vue'
 
 type FlutedGlassType = 'fluted' | 'cross'
 
