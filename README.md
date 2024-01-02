@@ -6,7 +6,6 @@
 
 This Vue component, inspired by a fluted glass effect showcased in a [tweet](https://twitter.com/arcinternet/status/1736782043202089154) by Arc, is specifically built for Vue 3. It leverages the latest features of Vue 3 to provide a unique and stylish glass effect, resembling fluted glass. Additionally, this project utilizes Tailwind CSS for styling, offering a highly customizable and responsive design experience.
 
-
 ## Features
 
 - **Vue 3 Compatible**: Designed specifically for Vue 3, taking advantage of its latest features.
@@ -14,7 +13,6 @@ This Vue component, inspired by a fluted glass effect showcased in a [tweet](htt
 - **Fluted Glass Effect**: Creates a visually appealing glass effect in your Vue applications.
 - **Responsive and Customizable**: Works well on all devices and offers easy customization options.
 - **Lightweight**: Minimal impact on load times and performance.
-
 
 ## Installation
 
@@ -42,8 +40,6 @@ Then, use it in your Vue 3 template:
 
 You can check working demo here - [https://fluted-glass.vercel.app](https://fluted-glass.vercel.app)
 
-
 ## License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
-
