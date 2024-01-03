@@ -23,7 +23,7 @@
     </div>
   </div>
 
-  <div class="fixed left-4 bottom-[7em] z-10">
+  <div class="fixed left-4 bottom-4 z-10">
     <div class="flex justify-center text-white mt-8">
       <Button
         as="a"
