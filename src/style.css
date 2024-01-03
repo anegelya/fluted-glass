@@ -36,7 +36,7 @@
 }
 
 .dark {
-  --background: 20 14.3% 4.1%;
+  --background: 0 0% 0%;
   --foreground: 60 9.1% 97.8%;
 
   --muted: 12 6.5% 15.1%;
@@ -75,11 +75,6 @@
   }
 }
 
-body {
-  background-color: black;
-  color: #ffd68a;
-}
-
 body::before {
   content: "";
   position: fixed;
@@ -87,7 +82,7 @@ body::before {
   left: 0;
   width: 100vw;
   height: 10em;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+  background: linear-gradient(to bottom, hsla(var(--background) / 0.5), transparent);
   mask: linear-gradient(to bottom, black, black 30%, transparent);
   backdrop-filter: blur(8px);
 }
@@ -99,7 +94,7 @@ body::after {
   left: 0;
   width: 100vw;
   height: 10em;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  background: linear-gradient(to top, hsla(var(--background) / 0.5), transparent);
   mask: linear-gradient(to top, black, black 30%, transparent);
   backdrop-filter: blur(8px);
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-screen overflow-x-hidden py-24">
+  <div class="max-w-screen overflow-x-hidden py-24 text-[#ffd68a]">
     <p class="text-[18vw] leading-none break-words break-all">
       TOI-3235 b. Mass (Mj) - 0.665±0.025, Radius (Rj) - 1.017±0.044, Period (days) 2.59261842±0.00000041, Semi-major axis (AU) - 0.02709±0.00046, Temp. (K) - 604±19.
     </p>
