@@ -98,3 +98,7 @@ body::after {
   mask: linear-gradient(to top, black, black 30%, transparent);
   backdrop-filter: blur(8px);
 }
+
+sup, sub {
+  font-size: 50%;
+}
