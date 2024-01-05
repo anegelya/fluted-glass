@@ -3,13 +3,14 @@
     <div class="h-full w-full backdrop-blur-md rounded-2xl overflow-hidden bg-stone-200/10 shadow-xl">
     </div>
 
-    <div class="grooves-v absolute h-full w-full top-0 left-0 right-0 bottom-0 rounded-2xl overflow-hidden bg-zinc-400/10 backdrop-blur-xl"></div>
     <div
-      v-if="type === 'cross'"
-      class="grooves-h absolute h-full w-full top-0 left-0 right-0 bottom-0 rounded-2xl overflow-hidden bg-stone-400/10 backdrop-blur-xl">
+      class="absolute h-full w-full top-0 left-0 right-0 bottom-0 rounded-2xl overflow-hidden bg-zinc-400/10 backdrop-blur-xl"
+      :style="groovesStyle">
     </div>
 
-    <div class="diffusion-v absolute h-full w-full top-0 left-0 right-0 bottom-0 rounded-2xl overflow-hidden bg-indigo-300/10"></div>
+    <div class="absolute h-full w-full top-0 left-0 right-0 bottom-0 rounded-2xl overflow-hidden bg-indigo-300/10"
+      :style="diffusionStyle">
+    </div>
 
     <div
       class="absolute h-full w-full top-0 left-0 right-0 bottom-0 rounded-2xl overflow-hidden border-[1px] border-stone-300/20 z-20 flex justify-center items-center">
@@ -19,41 +20,58 @@
 </template>
 
 <script setup lang="ts">
-import { withDefaults } from 'vue'
+import { computed, withDefaults } from 'vue'
 
-type FlutedGlassType = 'fluted' | 'cross'
+export type FlutedGlassType = 'fluted' | 'cross' | 'romb'
 
 export interface FlutedGlassProps {
   type: FlutedGlassType,
+  angle?: number,
 }
 
-withDefaults(defineProps<FlutedGlassProps>(), {
+const props = withDefaults(defineProps<FlutedGlassProps>(), {
   type: 'fluted',
 })
 
-</script>
+function createGroove(angle: number) {
+  return `repeating-linear-gradient(${angle}deg,
+      black 0px,
+      black 1px,
+      transparent 3px,
+      transparent 6px)`
+}
 
-<style scoped>
-.grooves-v {
-  mask-image: repeating-linear-gradient(to right,
-      black 0px,
-      black 1px,
-      transparent 3px,
-      transparent 6px);
-}
-.grooves-h {
-  mask-image: repeating-linear-gradient(to bottom,
-      black 0px,
-      black 1px,
-      transparent 3px,
-      transparent 6px);
-}
-.diffusion-v {
-  mask-image: repeating-linear-gradient(to right,
+const groovesStyle = computed(() => {
+  const groovesAngle = props.angle ?? (props.type === 'romb' ? 45 : 90)
+
+  const grooves = [
+    createGroove(groovesAngle)
+  ]
+
+  if (props.type !== 'fluted') {
+    grooves.push(createGroove(groovesAngle + 90))
+  }
+
+  return {
+    maskImage: grooves.join(', ')
+  }
+})
+
+function createDiffusion(angle: number) {
+  return `repeating-linear-gradient(${angle}deg,
       transparent 0px,
       transparent 3px,
       black 4px,
       black 5px,
-      transparent 6px);
+      transparent 6px)`
 }
-</style>
+
+const diffusionStyle = computed(() => {
+  const angle = props.angle ?? (props.type === 'romb' ? 45 : 90)
+
+  return {
+    maskImage: createDiffusion(angle)
+  }
+})
+
+</script>
