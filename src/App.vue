@@ -9,15 +9,21 @@
   </div>
   <div class="fixed top-0 left-0 right-0 bottom-0 w-full h-svh flex justify-center items-center z-10">
     <div class="w-full max-w-xl h-[10em] p-4">
-      <FlutedGlass :type="isCross ? 'cross' : 'fluted'">
+      <FlutedGlass :type="glassType">
         <div class="flex items-center space-x-2">
-          <Switch
-            id="cross-fluted-glass"
-            v-model:checked="isCross"
-          />
-          <Label for="cross-fluted-glass">
-            Cross Reed
-          </Label>
+          <Select v-model:model-value="glassType">
+            <SelectTrigger>
+              <SelectValue placeholder="Select glass type" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem
+                v-for="t in types"
+                :key="t"
+                :value="t">
+                {{ t }}
+              </SelectItem>
+            </SelectContent>
+          </Select>
         </div>
       </FlutedGlass>
     </div>
@@ -37,13 +43,24 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, Ref } from 'vue'
 import { Icon } from '@iconify/vue'
 import { Button } from './components/ui/button'
-import { Switch } from './components/ui/switch'
-import { Label } from './components/ui/label'
-import FlutedGlass from './components/FlutedGlass.vue'
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select'
+import FlutedGlass, { FlutedGlassType } from './components/FlutedGlass.vue'
 
-const isCross = ref(false)
+const types: FlutedGlassType[] = [
+  'fluted',
+  'cross',
+  'romb',
+]
+
+const glassType: Ref<FlutedGlassType | undefined> = ref(undefined)
 
 </script>
