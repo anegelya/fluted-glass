@@ -23,14 +23,15 @@ Simply copy the `FlutedGlass.vue` component into you project and that's all. Ple
 First, import the component:
 
 ```js
-import FlutedGlass from "./components/FlutedGlass.vue";
+import FlutedGlass, { FlutedGlassType } from './components/FlutedGlass.vue'
 ```
 
 Then, use it in your Vue 3 template:
 
 ```html
 <template>
-  <FlutedGlass>
+  <!-- Pass type prop. Default is `fluted` -->
+  <FlutedGlass type="cross">
     <!-- Your content here -->
   </FlutedGlass>
 </template>
