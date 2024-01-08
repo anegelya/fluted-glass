@@ -22,7 +22,7 @@
 <script setup lang="ts">
 import { computed, withDefaults } from 'vue'
 
-export type FlutedGlassType = 'fluted' | 'cross' | 'romb'
+export type FlutedGlassType = 'fluted' | 'cross' | 'romb' | 'circle'
 
 export interface FlutedGlassProps {
   type: FlutedGlassType,
@@ -34,6 +34,13 @@ const props = withDefaults(defineProps<FlutedGlassProps>(), {
 })
 
 function createGroove(angle: number) {
+  if (props.type === 'circle') {
+    return `repeating-radial-gradient(circle at 50%,
+      black 0px,
+      black 1px,
+      transparent 3px,
+      transparent 6px)`
+  }
   return `repeating-linear-gradient(${angle}deg,
       black 0px,
       black 1px,
@@ -58,6 +65,14 @@ const groovesStyle = computed(() => {
 })
 
 function createDiffusion(angle: number) {
+  if (props.type === 'circle') {
+    return `repeating-radial-gradient(circle at 50%,
+      transparent 0px,
+      transparent 3px,
+      black 4px,
+      black 5px,
+      transparent 6px)`
+  }
   return `repeating-linear-gradient(${angle}deg,
       transparent 0px,
       transparent 3px,
