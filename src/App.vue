@@ -59,6 +59,7 @@ const types: FlutedGlassType[] = [
   'fluted',
   'cross',
   'romb',
+  'circle',
 ]
 
 const glassType: Ref<FlutedGlassType | undefined> = ref(undefined)
